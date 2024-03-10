@@ -1,5 +1,6 @@
 # learn-wagtail
-
+## What is Wagtail?
+Wagtail is an open-source Django Content Management System (CMS) powered by python.
 
 ## Installation
 
