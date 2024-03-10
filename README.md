@@ -5,20 +5,22 @@ Wagtail is an open-source Django Content Management System (CMS) powered by pyth
 
 ## Installation
 
-On Linux/Mac
+For Linux/Mac
 
 On your terminal:
 
+- Install wagtail with pip (install pip if you do not have it installed.)
 ```bash
   pip install wagtail
 ```
-To verify installation:
+- To verify installation:
 ```bash
   pip show wagtail
 ```
 
 ## Start a new project
 
+- {project-name} could be anything you wish to name your project.
 ```bash
   wagtail start {project-name}
 ```
@@ -29,31 +31,34 @@ To verify installation:
 
 ## Set up a virtual Environment
 
+- If you have python3, then type python3  instead of python.
 ```bash
   python -m venv .venv
 ```
 
-To activate virtual environment:
+- Activate virtual environment:
 ```bash
   source .venv/bin/activate
 ```
 
-Install all requirements for wagtail in venv:
+- Install all requirements for wagtail in venv:
 ```bash
   pip install -r requirements.txt
 ```
 
 ## Set up the server
+
+- Start the server
 ```bash
   python manage.py runserver 0:8000
 ```
 
-Now you will see "unapplied migrations", so hit 'ctrl+C' to quit the server and type:
+- Now you will see "unapplied migrations", so hit 'ctrl+C' to quit the server and type:
 ```bash
   python manage.py migrate
 ```
 
-Start server again
+- Start server again
 ```bash
   python manage.py runserver 0:8000
 ```
@@ -62,12 +67,12 @@ Start server again
 ```bash
   sudo fuser -k 8000/tcp
 ```
-This will kill the running port process.
-Then start server again.
+- This will kill the running port process.
+- Then start server again.
 
 ## Localhost:8000
 
-Now open the localhost:8000 on any browser.
+- Now open the localhost:8000 on any browser.
 
 ## Set admin user
 
