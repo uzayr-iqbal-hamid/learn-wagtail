@@ -73,6 +73,8 @@ On your terminal:
 ## Localhost:8000
 
 - Now open the localhost:8000 on any browser.
+![Screenshot from 2024-03-10 23-39-02](https://github.com/uzayr-iqbal-hamid/learn-wagtail/assets/134723279/6b4cc37b-e720-4f47-a9e3-a0b632a489a5)
+
 
 ## Set admin user
 
@@ -97,6 +99,8 @@ On your terminal:
 - Open the project folder with VS Code or any IDE you use.
 - Go to home/templates/home/home_page.html file
 - Start editing to see the changes in the home page.
+![Screenshot from 2024-03-10 23-23-44](https://github.com/uzayr-iqbal-hamid/learn-wagtail/assets/134723279/0b1e2bb9-f42e-4505-a6b2-8063b6ef71a1)
+
 
 ## Extend the HomePage model
 
@@ -124,3 +128,4 @@ On your terminal:
         FieldPanel("banner_title"),
   ]
 ```
+![Screenshot from 2024-03-10 23-22-18](https://github.com/uzayr-iqbal-hamid/learn-wagtail/assets/134723279/bd20d3c0-da87-4035-87bf-e2ee1d6d682d)
