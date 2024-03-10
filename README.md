@@ -1,6 +1,7 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com/?lines=Learn+Wagtail;Beginner+Friendly;Follow+README.md+for+steps)](https://git.io/typing-svg)
 
 [Documentation](#Documentation)
+
 [Installation](#Installation)
 
 ## What is Wagtail?
