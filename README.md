@@ -1,7 +1,7 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com/?lines=Learn+Wagtail;Beginner+Friendly;Follow+README.md+for+steps)](https://git.io/typing-svg)
 
-- #Documentation
-- #Installation
+[Documentation](#Documentation)
+[Installation](#Installation)
 
 ## What is Wagtail?
 Wagtail is an open-source Django Content Management System (CMS) powered by python.
