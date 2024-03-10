@@ -85,3 +85,8 @@ Now open the localhost:8000 on any browser.
 
 - Enter the username and password to sign in.
 
+## Edit the Home page
+
+- Open the project folder with VS Code or any IDE you use.
+- Go to home>templates>home>home_page.html file
+- Start editing to see the changes in the home page.
