@@ -129,3 +129,7 @@ On your terminal:
   ]
 ```
 ![Screenshot from 2024-03-10 23-22-18](https://github.com/uzayr-iqbal-hamid/learn-wagtail/assets/134723279/bd20d3c0-da87-4035-87bf-e2ee1d6d682d)
+
+## Documentation
+
+Refer the Wagtail Documentation for further assistance: https://docs.wagtail.org/en/latest/releases/6.0.html
