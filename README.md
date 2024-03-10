@@ -95,5 +95,32 @@ On your terminal:
 ## Edit the Home page
 
 - Open the project folder with VS Code or any IDE you use.
-- Go to home>templates>home>home_page.html file
+- Go to home/templates/home/home_page.html file
 - Start editing to see the changes in the home page.
+
+## Extend the HomePage model
+
+- On the home/models.py
+```bash
+  from wagtail.admin.panels import FieldPanel
+```
+
+- Under the class HomePage(Page):
+```bash
+  banner_title = models.CharField(max_length=100, default='welcome')
+```
+
+- On your terminal, make migrations:
+```bash
+  python manage.py makemigrations
+```
+- migrate the changes
+```bash
+  python manage.py migrate
+```
+- Add FieldPanel:
+```bash
+  content_panels = Page.content_panels + [
+        FieldPanel("banner_title"),
+  ]
+```
