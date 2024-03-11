@@ -181,6 +181,13 @@ under content_panels
 ```bash
     FieldPanel("banner_image")
 ```
+- Make Migrations
+```bash
+    python manage.py makemigrations
+```
+```bash
+    python manage.py migrate
+```
 ![image](https://github.com/uzayr-iqbal-hamid/learn-wagtail/assets/134723279/8453f023-69c2-4810-921c-c974b4d926de)
 
 
