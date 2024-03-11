@@ -134,6 +134,39 @@ On your terminal:
 ```
 ![Screenshot from 2024-03-10 23-22-18](https://github.com/uzayr-iqbal-hamid/learn-wagtail/assets/134723279/bd20d3c0-da87-4035-87bf-e2ee1d6d682d)
 
+## Add New Page
+
+- To add a new page,
+```bash
+    python manage.py startapp {page-name}
+```
+
+- Go to {page-name} folder which will be created, under which you will find models.py. Copy the content from home/models.py and paste it on here.
+
+- Change the name of the model and now make migrations
+```bash
+    python manage.py makemigrations
+```
+```bash
+    python manage.py migrate
+```
+- Make a new folder under {page-name} folder, name it as templates/{project-name}/{project-name}_page.html
+- Copy the content from home/templates/home/home_page.html and paste it here.
+
+## Add New Banner
+- On models.py, add a new banner by adding (example)
+```bash
+    introduction = models.TextField(blank=True)
+```
+- And add 
+```bash
+    FieldPanel("introduction")
+```
+under content_panels
+
+![Screenshot from 2024-03-11 23-04-12](https://github.com/uzayr-iqbal-hamid/learn-wagtail/assets/134723279/8c36916a-63ea-4dec-adf9-e9d005431b3f)
+
+
 ## Documentation
 
 Refer the Wagtail Documentation for further assistance: https://docs.wagtail.org/en/latest/releases/6.0.html
