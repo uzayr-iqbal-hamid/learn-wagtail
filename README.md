@@ -166,6 +166,23 @@ under content_panels
 
 ![Screenshot from 2024-03-11 23-04-12](https://github.com/uzayr-iqbal-hamid/learn-wagtail/assets/134723279/8c36916a-63ea-4dec-adf9-e9d005431b3f)
 
+## Add Image Chooser
+- In models.py, add
+```bash
+    banner_image = models.ForeignKey(
+        'wagtailimages.Image',
+        null=True,
+        blank=False,
+        on_delete=models.SET_NULL,
+        related_name='+',
+    )
+```
+- and then in content_panels, add
+```bash
+    FieldPanel("banner_image")
+```
+![image](https://github.com/uzayr-iqbal-hamid/learn-wagtail/assets/134723279/8453f023-69c2-4810-921c-c974b4d926de)
+
 
 ## Documentation
 
