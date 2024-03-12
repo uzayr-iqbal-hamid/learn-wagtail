@@ -38,7 +38,9 @@
             {% block content %}{% endblock %}
         </main>
         <footer>
-            Custom footer
+            {% if settings.site_settings.SocialMediaSettings.instagram %}
+                <a href="{{ settings.site_settings.SocialMediaSettings.instagram }}">Follow on Instagram!</a>
+            {% endif %} 
         </footer>
 
         {# Global javascript #}
