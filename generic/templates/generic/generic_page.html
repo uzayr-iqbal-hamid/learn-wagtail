@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load static wagtailimages_tags %}
+{% load static wagtailimages_tags wagtailcore_tags %}
 
 {% block body_class %}template-genericpage{% endblock %}
 
@@ -23,6 +23,9 @@
             </a>
         {% endif %}
     </p>
+    <hr>
+
+    {% include_block page.body %}
 
 
 {% endblock content %}

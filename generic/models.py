@@ -3,7 +3,9 @@ from django.db import models
 from wagtail.models import Page
 from wagtail.admin.panels import FieldPanel
 from wagtail.snippets.models import register_snippet
-# from wagtail.snippets.views.snippets import SnippetViewSet
+from wagtail.fields import StreamField
+from wagtail import blocks
+from wagtail.images.blocks import ImageChooserBlock
 
 class GenericPage(Page):
     banner_title = models.CharField(max_length=100, default='welcome to home page')
@@ -27,11 +29,18 @@ class GenericPage(Page):
         related_name='+',
     )
 
+    body = StreamField([
+        ("heading", blocks.CharBlock()),
+        ("image", ImageChooserBlock()),
+        ("paragraph", blocks.RichTextBlock()),
+    ], null=True)
+
     content_panels = Page.content_panels + [
         FieldPanel("banner_title"),
         FieldPanel("introduction"),
         FieldPanel("banner_image"),
         FieldPanel("author"),
+        FieldPanel("body"),
     ]
 
 @register_snippet
