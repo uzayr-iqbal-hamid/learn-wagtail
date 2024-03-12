@@ -191,6 +191,49 @@ under content_panels
 ![image](https://github.com/uzayr-iqbal-hamid/learn-wagtail/assets/134723279/8453f023-69c2-4810-921c-c974b4d926de)
 
 
+## Add Social Media Settings
+- Make a new app for site settings,
+```bash
+    python manage.py startapp site_settings
+```
+- Go to {project-name}/settings/base.py and under INSTALLED_APPS, add 
+    - "site_settings",
+    - "wagtail.contrib.settings",
+- Then on the same base.py, scroll down,
+```bash
+    TEMPLATES = [
+        "context_processors": [
+            "wagtail.contrib.settings.context_processors.settings",
+        ] 
+    ]
+```
+- Then go to site_settings/models.py,
+```bash
+    from wagtail.admin.panels import FieldPanel
+    from wagtail.contrib.settings.models import BaseSiteSetting, register_setting
+```
+- Then add,
+```bash
+    @register_setting
+    class SocialMediaSettings(BaseSiteSetting):
+        instagram = models.URLField(max_length=100, blank=True)
+
+        panels = [
+            FieldPanel("instagram")
+        ]
+```
+- Run migrations and open the admin section on localhost:8000, open settings, look for Social Media Settings and add the instagram link.
+- Go to {project-name}/templates/base.html,
+```bash
+    {% if settings.site_settings.SocialMediaSettings.instagram %}
+        <a href="{{ settings.site_settings.SocialMediaSettings.instagram }}">
+            Follow on Instagram!
+        </a>
+    {% endif %} 
+```
+- Refresh your localhost:8000 to see the changes all over the site.
+
+
 ## Documentation
 
-Refer the Wagtail Documentation for further assistance: https://docs.wagtail.org/en/latest/releases/6.0.html
+Refer the Wagtail Documentation for further assistance: https://docs.wagtail.org/en/stable/
