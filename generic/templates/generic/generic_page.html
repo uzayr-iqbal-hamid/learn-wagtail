@@ -12,6 +12,17 @@
     <img src="{{ img.url }}" alt="{{ img.alt }}">
     <h3>{{ page.banner_title }}</h3>
     <h3>{{ page.introduction }}</h3>
+    <p>
+        {% image page.author.image fill-100x100 %}
+
+        Page created by: {{ page.author.name }}
+        from {{ page.author.company_name }}
+        {% if page.author.company_url %}
+            <a href="{{ page.author.company_url }}">
+                View Website
+            </a>
+        {% endif %}
+    </p>
 
 
 {% endblock content %}
